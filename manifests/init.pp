@@ -54,6 +54,9 @@
 # @param utils_package_name
 #   Name of the utils package, e.g. 'yum-utils', or 'dnf-utils'.
 #
+# @param config_file
+#   Full path to configuration file to manage.
+#
 # @example Enable management of the default repos for a supported OS:
 #   ---
 #   yum::manage_os_default_repos: true
@@ -104,6 +107,7 @@ class yum (
   Array[String] $repo_exclusions = [],
   Hash[String, Hash[String, String]] $gpgkeys = {},
   String $utils_package_name = 'yum-utils',
+  String $config_file = '/etc/yum.conf',
 ) {
   $module_metadata            = load_module_metadata($module_name)
   $supported_operatingsystems = $module_metadata['operatingsystem_support']

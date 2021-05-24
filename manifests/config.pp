@@ -36,9 +36,9 @@ define yum::config (
   }
 
   augeas { "yum.conf_${key}":
-    incl    => '/etc/yum.conf',
+    incl    => $yum::config_file,
     lens    => 'Yum.lns',
-    context => '/files/etc/yum.conf/main/',
+    context => "/files/${yum::config_file}/main/",
     changes => $_changes,
   }
 }

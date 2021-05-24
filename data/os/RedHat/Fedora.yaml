@@ -1,2 +1,4 @@
 ---
+## os: Fedora
 yum::utils_package_name: "dnf-utils"
+yum::config_file: '/etc/dnf/dnf.conf'
