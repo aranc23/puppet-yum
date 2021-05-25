@@ -15,7 +15,7 @@ yum::repos:
     enabled: true
     gpgcheck: true
     gpgkey: 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch'
-    skip_if_unavailable: false
+    skip_if_unavailable: 'False'
   fedora-modular-debuginfo:
     descr: 'Fedora Modular $releasever - $basearch - Debug'
     metalink: 'https://mirrors.fedoraproject.org/metalink?repo=fedora-modular-debug-$releasever&arch=$basearch'
